@@ -18,7 +18,7 @@ from pygame.locals import (
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
-        self.surf = pygame.Surface((75,75))
+        self.surf = pygame.Surface((75,25))
         self.surf.fill((255,255,255))
         self.rect = self.surf.get_rect()
 
@@ -54,7 +54,7 @@ while running:
             running = False
 
     # Fill the screen with white
-    screen.fill((255,255,255))
+    screen.fill((0,0,0))
 
     # This line says "Draw surf onto the screen at the center"
     screen.blit(player.surf, (SCREEN_WIDTH/2, SCREEN_HEIGHT/2))
@@ -62,12 +62,9 @@ while running:
     # Update the display
     pygame.display.flip()
 
-    # Create a surface and pass in a tuple containing its lenght and width
-    surf = pygame.Surface((50, 50))
 
-    # Give the surface a color to separate it from the background
-    surf.fill((0,0,0))
-    rect = surf.get_rect()
+
+   
 
         
 
